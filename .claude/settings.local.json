@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"c:/Users/diego/repos/menu-generator/resources/black.svg\" \"c:/Users/diego/repos/menu-generator/public/logo.svg\")",
+      "Bash(mkdir -p \"c:/Users/diego/repos/menu-generator/public\")",
+      "Bash(npm install *)",
+      "PowerShell(Get-Command node, npm, pnpm, bun -ErrorAction SilentlyContinue)",
+      "PowerShell($env:PATH -split ';' | Where-Object { $_ -ne '' } | Select-Object -First 30)",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\diego\\\\AppData\\\\Local /AD /B 2>nul\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\diego\\\\AppData\\\\Local\\\\Programs /AD /B 2>nul\")",
+      "PowerShell(winget --version 2>&1)",
+      "PowerShell(winget install OpenJS.NodeJS.LTS --silent --accept-package-agreements --accept-source-agreements 2>&1)",
+      "PowerShell(Get-Content \"C:\\\\Users\\\\diego\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-diego-repos-menu-generator\\\\72f14c78-ec95-46bd-9261-4d6ef5caeb04\\\\tasks\\\\b0q4u8kfn.output\" -Wait -Tail 20)"
+    ]
+  }
+}
