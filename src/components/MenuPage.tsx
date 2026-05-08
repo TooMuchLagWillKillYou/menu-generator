@@ -33,11 +33,9 @@ export function SectionTitle({
   return (
     <h2
       className={cn(
-        'font-brolimo text-center font-light leading-none',
-        size === 'lg' ? 'mb-10' : 'mb-6',
+        'font-brolimo text-center font-light leading-none text-[30pt] mb-5',
         className,
       )}
-      style={{ fontSize: size === 'lg' ? '44px' : '36px' }}
     >
       {children}
     </h2>
