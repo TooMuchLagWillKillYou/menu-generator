@@ -11,8 +11,8 @@ import DolciCocktailPage from './pages/DolciCocktailPage'
 import AmariGrappePage from './pages/AmariGrappePage'
 import CaffetteriaPage from './pages/CaffetteriaPage'
 
-const PAGE_W = 794
-const PAGE_H = 1123
+const PAGE_W = 559
+const PAGE_H = 794
 
 const pages = [
   <CoverPage />,
