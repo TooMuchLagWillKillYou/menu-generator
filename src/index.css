@@ -16,6 +16,17 @@
   --color-ink: #1d1d1b;
 }
 
+:root {
+  --forest: #254645;
+  --terracotta: #ae7046;
+  --cream: #eae2ce;
+  --cream-dark: #d9cfb8;
+  --white: #fdfaf5;
+  --text: #1a1a1a;
+  --text-mid: #4a4a4a;
+  --text-light: #7a7060;
+  --color-ink: #1d1d1b;
+}
 *,
 *::before,
 *::after {
