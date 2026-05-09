@@ -1,53 +1,56 @@
-import { cn } from '@/lib/utils';
-
-interface MenuPageProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function MenuPage({ children, className }: MenuPageProps) {
+export function MenuPage({ children }: { children: React.ReactNode }) {
   return (
     <div
-      className={cn(
-        'w-full min-h-full font-montserrat text-ink flex flex-col',
-        className,
-      )}
-      style={{ padding: '53px 66px' }}
+      style={{
+        width: '100%',
+        height: '100%',
+        padding: '10mm 17mm 5mm',
+        fontFamily: 'var(--font-montserrat)',
+        display: 'flex',
+        flexDirection: 'column',
+        color: 'var(--color-ink)', // todo: place --color-ink into index.css
+      }}
     >
       {children}
     </div>
   );
 }
 
-interface SectionTitleProps {
-  children: React.ReactNode;
-  className?: string;
-  size?: 'lg' | 'sm';
-}
-
-export function SectionTitle({
-  children,
-  className,
-  size = 'lg',
-}: SectionTitleProps) {
+export function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2
-      className={cn(
-        'font-brolimo text-center font-light leading-none text-[30pt] mb-5',
-        className,
-      )}
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 'calc(var(--spacing) * 25)', // todo: place --spacing into index.css
+      }}
     >
-      {children}
-    </h2>
+      <h2 style={{ fontFamily: 'var(--font-brolimo)', fontSize: '30pt' }}>
+        {children}
+      </h2>
+    </div>
   );
 }
 
-interface MenuItemProps {
-  name: string;
-  price: string;
-  description: string;
-  note?: string;
-  className?: string;
+export function MenuItemsContainer({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100%',
+        padding: '5mm 0mm',
+      }}
+    >
+      {children}
+    </div>
+  );
 }
 
 export function MenuItem({
@@ -55,17 +58,41 @@ export function MenuItem({
   price,
   description,
   note,
-  className,
-}: MenuItemProps) {
+}: {
+  name: string;
+  price: string;
+  description: string;
+  note?: string;
+}) {
   return (
-    <div className={cn('mb-10', className)}>
-      <div className="flex justify-between items-baseline">
-        <span style={{ fontSize: '22px', fontWeight: 400 }}>{name}</span>
-        <span style={{ fontSize: '22px', fontWeight: 400 }}>{price}</span>
+    <div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'baseline',
+        }}
+      >
+        <span
+          style={{
+            fontFamily: 'var(--font-brolimo)',
+            fontSize: '22px',
+            fontWeight: 400,
+          }}
+        >
+          {name}
+        </span>
+        <span
+          style={{
+            width: 'calc(var(--spacing) * 8)',
+            fontFamily: 'var(--font-brolimo)',
+            fontSize: '14pt',
+          }}
+        >
+          {price}
+        </span>
       </div>
-      <p style={{ fontSize: '14px', lineHeight: '1.45', marginTop: '6px' }}>
-        {description}
-      </p>
+      <p style={{ fontSize: '12pt', lineHeight: '1.25' }}>{description}</p>
       {note && (
         <p style={{ fontSize: '11px', marginTop: '4px', color: '#555' }}>
           {note}
@@ -75,14 +102,24 @@ export function MenuItem({
   );
 }
 
-interface PageFooterProps {
-  children: React.ReactNode;
-}
-
-export function PageFooter({ children }: PageFooterProps) {
+export function PageFooter({ children }: { children?: React.ReactNode }) {
   return (
-    <div className="mt-auto">
-      <p style={{ fontSize: '11px', letterSpacing: '0.02em' }}>{children}</p>
+    <div
+      style={{
+        height: 'calc(var(--spacing) * 10)',
+      }}
+    >
+      <p
+        style={{
+          display: 'flex',
+          alignItems: 'end',
+          height: '100%',
+          fontSize: '11px',
+          letterSpacing: '0.02em',
+        }}
+      >
+        {children}
+      </p>
     </div>
   );
 }
