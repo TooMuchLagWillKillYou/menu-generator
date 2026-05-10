@@ -3,7 +3,12 @@ import { MenuPage, MenuItem, MenuItemsContainer } from '@/components/MenuPage';
 export default function ClassichePage2() {
   return (
     <MenuPage>
-      <MenuItemsContainer>
+      <MenuItemsContainer style={{ height: '70%' }}>
+        <MenuItem
+          name="Bresaola, rucola e grana"
+          price="12"
+          description="pomodoro pelato italiano, mozzarella da latte 100% italiano, rucola, bresaola della Valtellina IGP, ricciola di Grana Padano riserva"
+        />
         <MenuItem
           name="Vegetariana"
           price="10,5"

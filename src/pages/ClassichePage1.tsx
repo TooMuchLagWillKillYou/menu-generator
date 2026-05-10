@@ -36,11 +36,6 @@ export default function ClassichePage1() {
           price="10,5"
           description="mozzarella fior di latte, gorgonzola, brie, spolverata di Grana Padano DOP"
         />
-        <MenuItem
-          name="Bresaola, rucola e grana"
-          price="12"
-          description="pomodoro pelato italiano, mozzarella da latte 100% italiano, rucola, bresaola della Valtellina IGP, ricciola di Grana Padano riserva"
-        />
       </MenuItemsContainer>
       <PageFooter>
         DISPONIBILI: mozzarella senza lattosio e basi no glutine

@@ -35,8 +35,10 @@ export function SectionTitle({ children }: { children: React.ReactNode }) {
 
 export function MenuItemsContainer({
   children,
+  style,
 }: {
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 }) {
   return (
     <div
@@ -46,6 +48,7 @@ export function MenuItemsContainer({
         justifyContent: 'space-between',
         height: '100%',
         padding: '5mm 0mm',
+        ...style,
       }}
     >
       {children}
